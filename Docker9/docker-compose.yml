@@ -1,0 +1,13 @@
+
+version: "3.9"
+services:
+  api:
+    image: xblackwolfx/node-express-app-test
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  db:
+    image: xblackwolfx/mongodb-server-test
+    ports:
+      - "27017:27017"
